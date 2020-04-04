@@ -81,5 +81,23 @@ public class Person {
     public void setItem1(String item1) {this.item1 = item1;}
     public void setItem2(String item2) {this.item2 = item2;}
 
-    
+    /** SQL Create Person Table **/
+    public static final String CREATE_TABLE =
+            "CREATE TABLE " + TABLE_NAME + "("
+                    + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + COLUMN_RELLVL + " INTEGER,"
+                    + COLUMN_STRESS + " INTEGER,"
+                    + COLUMN_TRUST + " INTEGER,"
+                    + COLUMN_MONEY + " REAL,"
+                    + COLUMN_FOOD + " REAL,"
+                    + COLUMN_FNAME + " TEXT,"
+                    + COLUMN_LNAME + " TEXT,"
+                    + COLUMN_JOB + " TEXT,"
+                    + COLUMN_TRAIT1 + " TEXT,"
+                    + COLUMN_TRAIT2 + " TEXT,"
+                    + COLUMN_TRAIT3 + " TEXT,"
+                    + COLUMN_TRAIT4 + " TEXT,"
+                    + COLUMN_ITEM1 + " TEXT,"
+                    + COLUMN_ITEM2 + " TEXT,"
+                    + ")";
 }

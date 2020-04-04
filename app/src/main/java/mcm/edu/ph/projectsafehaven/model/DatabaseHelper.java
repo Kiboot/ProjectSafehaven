@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-import info.androidhive.sqlite.database.model.Note;
+
 import mcm.edu.ph.projectsafehaven.model.database.Person;
 
 /**
@@ -34,7 +34,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         // create notes table
-        db.execSQL(Note.CREATE_TABLE);
+        db.execSQL(Game.CREATE_TABLE);
     }
 
     // Upgrading database
