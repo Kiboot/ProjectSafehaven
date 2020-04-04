@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">ProjectSafehaven</string>
+
+    /** arms specialists not in active duty**/
+    <string name="job_expolice">Police Retiree</string>
+    <string name="job_armyvet">Army Veteran</string>
+    <string name="job_guard">Security Guard</string>
+
+    /** technologists **/
+    <string name="job_itguy">IT Specialist</string>
+    <string name="job_engineer">Engineer</string>
+    <string name="job_architect">Architect</string>
+    <string name="physicist">Physicist</string>
+    <string name="chemist">Chemist</string>
+
+    /** narrator **/
+    <string name="job_attorney">Attorney</string>
+    <string name="job_Librarian">Librarian</string>
+    <string name="job_author">Author</string>
+    <string name="job_reporter">News Reporter</string>
+    <string name="job_scriptWriter">Scriptwriter</string>
+
+    /** no specialization **/
+    <string name="job_housewife">Housewife</string>
+    <string name="job_househusband">House Husband</string>
+    <string name="job_retiree">Pensioner</string>
+    <string name="job_jobless">Jobless</string>
+    <string name="job_homeless">Homeless</string>
+    <string name="job_hsstudent">High School Student</string>
+
+    /** psychologists **/
+    <string name="job_psychotherapist">PsychoTherapist</string>
+    <string name="job_motivator">Motivational Speaker</string>
+    <string name="job_counsellor">Employee Counsellor</string>
+    <string name="job_teacher">Teacher</string>
+
+    /** medical practitioners not in active duty**/
+    <string name="job_petvet">Veterinarian</string>
+    <string name="job_studdoctor">Doctor</string>
+    <string name="job_studnurse">Nurser</string>
+
 </resources>
