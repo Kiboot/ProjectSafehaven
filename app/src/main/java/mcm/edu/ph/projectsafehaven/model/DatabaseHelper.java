@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import info.androidhive.sqlite.database.model.Note;
-import mcm.edu.ph.projectsafehaven.model.database.Game;
+import mcm.edu.ph.projectsafehaven.model.database.Person;
 
 /**
  * Created by ravi on 15/03/18.
@@ -70,9 +70,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // get readable database as we are not inserting anything
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursor = db.query(Game.TABLE_NAME,
-                new String[]{Game.COLUMN_ID, Game.COLUMN_NOTE, Game.COLUMN_TIMESTAMP},
-                Game.COLUMN_ID + "=?",
+        Cursor cursor = db.query(Person.TABLE_NAME,
+                new String[]{Person.COLUMN_ID, Person.COLUMN_NOTE, Person.COLUMN_TIMESTAMP},
+                Person.COLUMN_ID + "=?",
                 new String[]{String.valueOf(id)}, null, null, null, null);
 
         if (cursor != null)
@@ -80,9 +80,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // prepare note object
         Note note = new Note(
-                cursor.getInt(cursor.getColumnIndex(Game.COLUMN_ID)),
-                cursor.getString(cursor.getColumnIndex(Game.COLUMN_NOTE)),
-                cursor.getString(cursor.getColumnIndex(Game.COLUMN_TIMESTAMP)));
+                cursor.getInt(cursor.getColumnIndex(Person.COLUMN_ID)),
+                cursor.getString(cursor.getColumnIndex(Person.COLUMN_NOTE)),
+                cursor.getString(cursor.getColumnIndex(Person.COLUMN_TIMESTAMP)));
 
         // close the db connection
         cursor.close();
