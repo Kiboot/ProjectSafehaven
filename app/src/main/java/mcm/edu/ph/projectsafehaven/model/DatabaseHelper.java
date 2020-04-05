@@ -12,17 +12,14 @@ import java.util.List;
 
 import mcm.edu.ph.projectsafehaven.model.database.Person;
 
-/**
- * Created by ravi on 15/03/18.
- */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Database Version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 5;
 
     // Database Name
-    private static final String DATABASE_NAME = "notes_db";
+    private static final String DATABASE_NAME = "game_db";
 
 
     public DatabaseHelper(Context context) {
@@ -33,18 +30,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        // create notes table
-        db.execSQL(Game.CREATE_TABLE);
+        // create Person table
+        db.execSQL(Person.CREATE_TABLE);
     }
 
     // Upgrading database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop older table if existed
-        db.execSQL("DROP TABLE IF EXISTS " + Note.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + Person.TABLE_NAME);
 
         // Create tables again
         onCreate(db);
+    }
+
+    public long insertPerson(){
+        // get writable database as we want to write data
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
     }
 
     public long insertNote(String note) {

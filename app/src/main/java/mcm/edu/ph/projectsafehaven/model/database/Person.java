@@ -4,6 +4,7 @@ public class Person {
 
     public static String TABLE_NAME = "persons";
     public static String COLUMN_ID = "pid";
+    public static String COLUMN_HEALTH = "health";
     public static String COLUMN_RELLVL = "rellvl";
     public static String COLUMN_STRESS = "stress";
     public static String COLUMN_TRUST = "trust";
@@ -20,18 +21,19 @@ public class Person {
     public static String COLUMN_ITEM2 = "item2";
 
 
-    private int pid, rellvl, stress, trust;
+    private int pid, health, rellvl, stress, trust;
     private double money, food;
     private String fname, lname, job, trait1, trait2, trait3, trait4, item1, item2;
 
     public Person(){} //default constructor. put in place to prevent minor usage errors.
 
     /** main data catching constructor **/
-    public Person (int pid, int rellvl, int stress, int trust,
+    public Person (int pid, int health, int rellvl, int stress, int trust,
                    double money, double food,
                    String fname, String lname, String job, String trait1, String trait2, String trait3, String trait4, String item1, String item2){
 
         this.pid = pid;
+        this.health = health;
         this.rellvl = rellvl;
         this.stress = stress;
         this.trust = trust;
@@ -49,6 +51,7 @@ public class Person {
     }
     /** getters **/
     public int getPid(){return pid;}
+    public int getHealth() {return health;}
     public int getRellvl() {return rellvl;}
     public int getStress() {return stress;}
     public int getTrust() {return trust;}
@@ -66,6 +69,7 @@ public class Person {
 
     /** setters **/
     public void setPid(int pid) {this.pid = pid;}
+    public void setHealth(int health) {this.health = health;}
     public void setRellvl(int rellvl) {this.rellvl = rellvl;}
     public void setStress(int stress) {this.stress = stress;}
     public void setTrust(int trust) {this.trust = trust;}
@@ -85,6 +89,7 @@ public class Person {
     public static final String CREATE_TABLE =
             "CREATE TABLE " + TABLE_NAME + "("
                     + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + COLUMN_HEALTH + " INTEGER,"
                     + COLUMN_RELLVL + " INTEGER,"
                     + COLUMN_STRESS + " INTEGER,"
                     + COLUMN_TRUST + " INTEGER,"
