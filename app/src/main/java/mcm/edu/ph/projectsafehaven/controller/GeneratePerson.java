@@ -13,26 +13,24 @@ public class GeneratePerson {
     private int SEED = 1; //random seeding not enabled at the moment
     Random gen = new Random();
 
-    public GeneratePerson(){}//default constructor
-
-    int randomizeSex(){
+    public int randomizeSex(){
         int sex;
         sex = gen.nextInt(2);
         return sex;
     }
     //randomizing health is turned off for testing purposes
-    int randomizeHealth(){return 100;}
-    int randomizeRelLvl(){
+    public int randomizeHealth(){return 100;}
+    public int randomizeRelLvl(){
         int relLvl;
         relLvl = gen.nextInt(3);
         return relLvl;
     }
-    int randomizeStress(){
+    public int randomizeStress(){
         int stress;
         stress = gen.nextInt(30);
         return  stress;
     }
-    int randomizeTrust(int relLvl){
+    public int randomizeTrust(int relLvl){
         int trust;
         if(relLvl==0){
             //if he/she is a family member, trust level would be 70 - 100
@@ -50,17 +48,17 @@ public class GeneratePerson {
         }
         return  trust;
     }
-    double randomizeMoney(){
+    public double randomizeMoney(){
         int intMoney;
         intMoney = gen.nextInt(10000);
         return (double)intMoney;
     }
-    double randomizeFood(){
+    public double randomizeFood(){
         int food;
         food = gen.nextInt(100);
         return (double)food;
     }
-    String randomizeFname(){
+    public String randomizeFname(){
         //band-aid solution until names have been transferred to a file
         String[] fnameArray = new String[]{
                 "Aezra","Lyka Dion", "Ria", "Abigail", "Aira", "Alexa",
@@ -87,11 +85,11 @@ public class GeneratePerson {
         //random name picker
         return fname_female[gen.nextInt(120)];
     }
-    String randomizeLname(){
+    public String randomizeLname(){
         String[] lname = Resources.getSystem().getStringArray(R.array.lname);
         return lname[gen.nextInt(51)];
     }
-    String randomizeJob(){
+    public String randomizeJob(){
         int jobType;
         String job="";
         String[] jobClass1 = Resources.getSystem().getStringArray(R.array.job_arms);
@@ -110,29 +108,54 @@ public class GeneratePerson {
         else{job = jobClass6[gen.nextInt(5)];}
         return job;
     }
-    String randomizeTrait1(){
+    public String randomizeTrait1(){
         String[]  trait1 = Resources.getSystem().getStringArray(R.array.trait1);
         return trait1[gen.nextInt(5)];
     }
-    String randomizeTrait2(){
+    public String randomizeTrait2(){
         String[] trait2 = Resources.getSystem().getStringArray(R.array.trait2);
         return trait2[gen.nextInt(5)];
     }
-    String randomizeTrait3(){
+    public String randomizeTrait3(){
         String[] trait3 = Resources.getSystem().getStringArray(R.array.trait3);
         return trait3[gen.nextInt(5)];
     }
-    String randomizeTrait4(){
+    public String randomizeTrait4(){
         String[] trait4 = Resources.getSystem().getStringArray(R.array.trait4);
         return trait4[gen.nextInt(5)];
     }
-    String randomizeItem1(){
+    public String randomizeItem1(){
         String[]  item1 = Resources.getSystem().getStringArray(R.array.item1);
         return item1[gen.nextInt(5)];
     }
-    String randomizeItem2(){
+    public String randomizeItem2(){
         String[]  item2 = Resources.getSystem().getStringArray(R.array.item2);
         return item2[gen.nextInt(5)];
+    }
+
+    public GeneratePerson(){}//default constructor
+
+    public void randomizeP(){
+        int pid, sex, health, rellvl, stress, trust;
+        double money, food;
+        String fname, lname, job, trait1, trait2, trait3, trait4, item1, item2;
+
+        sex = randomizeSex();
+        health = randomizeHealth();
+        rellvl = randomizeRelLvl();
+        stress = randomizeStress();
+        trust = randomizeTrust(rellvl);
+        money = randomizeMoney();
+        food = randomizeFood();
+        fname = randomizeFname();
+        lname = randomizeLname();
+        job = randomizeJob();
+        trait1 = randomizeTrait1();
+        trait2 = randomizeTrait2();
+        trait3 = randomizeTrait3();
+        trait4 = randomizeTrait4();
+        item1 = randomizeItem1();
+        item2 = randomizeItem2();
     }
 
 
