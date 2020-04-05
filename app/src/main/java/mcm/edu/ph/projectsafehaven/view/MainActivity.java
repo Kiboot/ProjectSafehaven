@@ -40,22 +40,22 @@ public class MainActivity extends AppCompatActivity{
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        final GeneratePerson person1 = new GeneratePerson();
+                        final GeneratePerson p1 = new GeneratePerson();
 
-                        sexTxt.setText(String.valueOf(person1.randomizeSex()));
-                        relLvlTxt.setText(String.valueOf(person1.randomizeRelLvl()));
-                        stressTxt.setText(String.valueOf(person1.randomizeStress()));
-                        trustTxt.setText(String.valueOf(person1.randomizeTrust()));
-                        moneyTxt.setText(String.valueOf(person1.randomizeMoney()));
-                        foodTxt.setText(String.valueOf(person1.randomizeFood()));
-                        jobTxt.setText(String.valueOf(person1.randomizeJob()));
-                        trait1Txt.setText(String.valueOf(person1.randomizeTrait1()));
-                        trait2Txt.setText(String.valueOf(person1.randomizeTrait2()));
-                        trait3Txt.setText(String.valueOf(person1.randomizeTrait3()));
-                        trait4Txt.setText(String.valueOf(person1.randomizeTrait4()));
-                        item1Txt.setText(String.valueOf(person1.randomizeItem1()));
-                        item2Txt.setText(String.valueOf(person1.randomizeItem2()));
-                        nameTxt.setText(String.valueOf(person1.randomizeFname()+" "+person1.randomizeLname()));
+                        sexTxt.setText(String.valueOf(p1.getSexString()));
+                        relLvlTxt.setText(String.valueOf(p1.getRelLvlString()));
+                        stressTxt.setText(String.valueOf(p1.getStress()));
+                        trustTxt.setText(String.valueOf(p1.getTrust()));
+                        moneyTxt.setText(String.valueOf(p1.getMoney()));
+                        foodTxt.setText(String.valueOf(p1.getFood()));
+                        jobTxt.setText(String.valueOf(p1.getJob()));
+                        trait1Txt.setText(String.valueOf(p1.getTrait1()));
+                        trait2Txt.setText(String.valueOf(p1.getTrait2()));
+                        trait3Txt.setText(String.valueOf(p1.getTrait3()));
+                        trait4Txt.setText(String.valueOf(p1.getTrait4()));
+                        item1Txt.setText(String.valueOf(p1.getItem1()));
+                        item2Txt.setText(String.valueOf(p1.getItem2()));
+                        nameTxt.setText(String.valueOf(p1.fullName()));
 
                     }
                 }

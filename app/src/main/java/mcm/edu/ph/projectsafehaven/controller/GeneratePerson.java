@@ -11,25 +11,22 @@ import mcm.edu.ph.projectsafehaven.R;
 public class GeneratePerson {
 
     private int SEED = 1; //random seeding not enabled at the moment
-    private int sex;
-    private int relLvl;
+
     private Random gen = new Random();
-    private String fname;
-    private String lname;
+    private int pid, sex, health, relLvl, stress, trust;
+    private double money, food;
+    private String fname, lname, job, trait1, trait2, trait3, trait4, item1, item2;
 
     public int randomizeSex(){
         int sex;
         sex = gen.nextInt(2);
-        this.sex = sex;
         return sex;
-
     }
     //randomizing health is turned off for testing purposes
     public int randomizeHealth(){return 100;}
     public int randomizeRelLvl(){
         int relLvl;
         relLvl = gen.nextInt(3);
-        this.relLvl = relLvl;
         return relLvl;
     }
     public int randomizeStress(){
@@ -37,7 +34,7 @@ public class GeneratePerson {
         stress = gen.nextInt(30);
         return  stress;
     }
-    public int randomizeTrust(){
+    public int randomizeTrust(int relLvl){
         int trust;
         if(relLvl==0){
             //if he/she is a family member, trust level would be 70 - 100
@@ -45,13 +42,13 @@ public class GeneratePerson {
             trust += 70;
         }
         else if(relLvl==1){
-            //if he/she is a friend, trust level would be 50 - 100
-            trust = gen.nextInt(50);
-            trust += 50;
+            //if he/she is a friend, trust level would be 40 - 70
+            trust = gen.nextInt(30);
+            trust += 40;
         }
         else {
-            //if he/she is a nobody, trust level would be 0 - 50
-            trust = gen.nextInt(50);
+            //if he/she is a nobody, trust level would be 0 - 40
+            trust = gen.nextInt(40);
         }
         return  trust;
     }
@@ -65,8 +62,7 @@ public class GeneratePerson {
         food = gen.nextInt(100);
         return (double)food;
     }
-    public String randomizeFname(){
-
+    public String randomizeFname(int sex){
         //band-aid solution until names have been transferred to a file
         String[] fnameArray = new String[]{
                 "Aezra","Lyka Dion", "Ria", "Abigail", "Aira", "Alexa",
@@ -92,14 +88,13 @@ public class GeneratePerson {
         //String[] fname_female = Resources.getSystem().getStringArray(R.array.fname_f);
         //random name picker
         //return fname_female[gen.nextInt(120)];
-        String fname = fnameArray[gen.nextInt(120)];
-        this.fname = fname;
-        return fname;
+        String fnamee = fnameArray[gen.nextInt(120)];
+        return fnamee;
     }
     public String randomizeLname(){
         String[] lname = new String[]{"Andrada", "Aquino", "Arellano", "Bautista", "Bernardino",
                                     "Cardoza", "Caridad", "Castillo", "Castro", "Chan", "Chang",
-                                    "Chua", "Cruz", "De Castro", "De La Cruz", "De La Rosa",
+                                    "Chua", "Cordero", "Cruz", "De Castro", "De La Cruz", "De La Rosa",
                                     "De Los Reyes", "De Los Santos", "Del Rosario", "Esteros",
                                     "Faviana", "Favio", "Flores", "García", "Go", "Ignacio",
                                     "Lee", "Lim", "Lovino", "Mendoza", "Mercado", "Navarro",
@@ -124,7 +119,7 @@ public class GeneratePerson {
         String[] jobClass1 = new String[]{"Police Retiree", "Army Veteran", "Security Guard"};
         String[] jobClass2 = new String[]{"Housewife", "House Husband", "Pensioner","Jobless","Homeless","High School"};
         String[] jobClass3= new String[]{"Veterinarian", "Student Doctor", "Student Nurse"};
-        String[] jobClass4 = new String[]{"Psychotherapist", "Motivational Speaker", "Counsellor", "Teacher", "Priest"};
+        String[] jobClass4 = new String[]{"Psychotherapist", "Motivational Speaker", "Counsellor", "Teacher", "Pastor"};
         String[] jobClass5 = new String[]{"Attorney", "Librarian", "Author", "News Reporter", "Scriptwriter"};
         String[] jobClass6 = new String[]{"IT Specialist", "Engineer", "Architect", "Phyisicist", "Chemist"};
 
@@ -162,21 +157,15 @@ public class GeneratePerson {
         return item2[gen.nextInt(5)];
     }
 
-    public GeneratePerson(){}//default constructor
-
-    public void randomizeP(){
-        int pid, sex, health, rellvl, stress, trust;
-        double money, food;
-        String fname, lname, job, trait1, trait2, trait3, trait4, item1, item2;
-
+    public GeneratePerson(){
         sex = randomizeSex();
         health = randomizeHealth();
-        rellvl = randomizeRelLvl();
+        relLvl = randomizeRelLvl();
         stress = randomizeStress();
-        trust = randomizeTrust();
+        trust = randomizeTrust(relLvl);
         money = randomizeMoney();
         food = randomizeFood();
-        fname = randomizeFname();
+        fname = randomizeFname(sex);
         lname = randomizeLname();
         job = randomizeJob();
         trait1 = randomizeTrait1();
@@ -185,14 +174,53 @@ public class GeneratePerson {
         trait4 = randomizeTrait4();
         item1 = randomizeItem1();
         item2 = randomizeItem2();
+    }//default constructor
+
+
+
+
+    public void randomizeP(){}
+    public String fullName(){return fname+" "+lname;}
+
+    /** Primary getters - this class might not have setters to avoid data override **/
+    public int getSex() {return sex;}
+    public int getHealth() {return health;}
+    public int getRelLvl() {return relLvl;}
+    public int getStress() {return stress;}
+    public int getTrust() {return trust;}
+    public double getMoney() {return money;}
+    public double getFood() {return food;}
+    public String getFName() {return fname;}
+    public String getLName() {return lname;}
+    public String getJob() {return job;}
+    public String getTrait1() {return trait1;}
+    public String getTrait2() {return trait2;}
+    public String getTrait3() {return trait3;}
+    public String getTrait4() {return trait4;}
+    public String getItem1() {return item1;}
+    public String getItem2() {return item2;}
+
+    /** Secondary getters **/
+    public String getSexString(){
+        String sexString;
+        if (sex==0){
+            sexString ="Male";
+        }
+        else sexString = "Female";
+
+        return sexString;
     }
-    public String fullName(){
-        return fname+" "+lname;
+    public String getRelLvlString(){
+        String relLvlString;
+        if(relLvl == 0){
+            relLvlString = "Family";
+        }
+        else if(relLvl == 1){
+            relLvlString ="Acquaintance";
+        }
+        else relLvlString = "Nobodies";
+        return relLvlString;
     }
-
-
-
-
 
 
 }
