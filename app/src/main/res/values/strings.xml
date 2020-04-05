@@ -1,43 +1,95 @@
 <resources>
     <string name="app_name">ProjectSafehaven</string>
 
+
+    <string-array name="trait1">
+        <item>Positive Trait 1</item>
+        <item>Positive Trait 1</item>
+        <item>Positive Trait 1</item>
+        <item>Positive Trait 1</item>
+        <item>Positive Trait 1</item>
+    </string-array>
+    <string-array name="trait2">
+        <item>Negative Trait 1</item>
+        <item>Negative Trait 1</item>
+        <item>Negative Trait 1</item>
+        <item>Negative Trait 1</item>
+        <item>Negative Trait 1</item>
+    </string-array>
+    <string-array name="trait3">
+        <item>Positive Trait 2</item>
+        <item>Positive Trait 2</item>
+        <item>Positive Trait 2</item>
+        <item>Positive Trait 2</item>
+        <item>Positive Trait 2</item>
+    </string-array>
+    <string-array name="trait4">
+        <item>Negative Trait 2</item>
+        <item>Negative Trait 2</item>
+        <item>Negative Trait 2</item>
+        <item>Negative Trait 2</item>
+        <item>Negative Trait 2</item>
+    </string-array>
+
+    <string-array name="item1">
+        <item>None</item>
+        <item>Item 1</item>
+        <item>None</item>
+        <item>Item 1</item>
+        <item>None</item>
+    </string-array>
+    <string-array name="item2">
+        <item>Item 2</item>
+        <item>None</item>
+        <item>Item 2</item>
+        <item>None</item>
+        <item>Item 2</item>
+    </string-array>
     /** arms specialists not in active duty**/
-    <string name="job_expolice">Police Retiree</string>
-    <string name="job_armyvet">Army Veteran</string>
-    <string name="job_guard">Security Guard</string>
-
+    <string-array name="job_arms">
+        <item>Police Retiree</item>
+        <item>Army Veteran</item>
+        <item>Security Guard</item>
+    </string-array>
     /** technologists **/
-    <string name="job_itguy">IT Specialist</string>
-    <string name="job_engineer">Engineer</string>
-    <string name="job_architect">Architect</string>
-    <string name="physicist">Physicist</string>
-    <string name="chemist">Chemist</string>
-
+    <string-array name="job_techies">
+        <item>IT Specialist</item>
+        <item>Engineer</item>
+        <item>Architect</item>
+        <item>Physicist</item>
+        <item>Chemist</item>
+    </string-array>
     /** narrator **/
-    <string name="job_attorney">Attorney</string>
-    <string name="job_Librarian">Librarian</string>
-    <string name="job_author">Author</string>
-    <string name="job_reporter">News Reporter</string>
-    <string name="job_scriptWriter">Scriptwriter</string>
-
+    <string-array name="job_narrator">
+        <item>Attorney</item>
+        <item>Librarian</item>
+        <item>Author</item>
+        <item>News Reporter</item>
+        <item>Scriptwriter</item>
+    </string-array>
     /** no specialization **/
-    <string name="job_housewife">Housewife</string>
-    <string name="job_househusband">House Husband</string>
-    <string name="job_retiree">Pensioner</string>
-    <string name="job_jobless">Jobless</string>
-    <string name="job_homeless">Homeless</string>
-    <string name="job_hsstudent">High School Student</string>
-
+    <string-array name="job_freeloader">
+        <item>Housewife</item>
+        <item>House Husband</item>
+        <item>Pensioner</item>
+        <item>Jobless</item>
+        <item>Homeless</item>
+        <item>High School Student</item>
+    </string-array>
     /** psychologists **/
-    <string name="job_psychotherapist">PsychoTherapist</string>
-    <string name="job_motivator">Motivational Speaker</string>
-    <string name="job_counsellor">Employee Counsellor</string>
-    <string name="job_teacher">Teacher</string>
-
+    <string-array name="job_moraleboost">
+        <item>Psychotherapist</item>
+        <item>Motivational Speaker</item>
+        <item>Counsellor</item>
+        <item>Teacher</item>
+        <item>Priest</item>
+    </string-array>
     /** medical practitioners not in active duty**/
-    <string name="job_petvet">Veterinarian</string>
-    <string name="job_studdoctor">Doctor</string>
-    <string name="job_studnurse">Nurse</string>
+    <string-array name="job_medic">
+        <item>Veterinarian</item>
+        <item>Student Doctor</item>
+        <item>Student Nurse</item>
+    </string-array>
 
     /** 120 female names - please edit this comment if you are going to add more **/
     <string-array name="fname_f">
@@ -162,4 +214,61 @@
         <item>Victoria</item>
         <item>Yana</item>
     </string-array>
+
+    /** 51 last names - please edit this comment if you are going to add more **/
+    <string-array name="lname">
+        <item>Andrada</item>
+        <item>Aquino</item>
+        <item>Arellano</item>
+        <item>Bautista</item>
+        <item>Bernardino</item>
+        <item>Cardoza</item>
+        <item>Caridad</item>
+        <item>Castillo</item>
+        <item>Castro</item>
+        <item>Chan</item>
+        <item>Chang</item>
+        <item>Chua</item>
+        <item>Cruz</item>
+        <item>De Castro</item>
+        <item>De La Cruz</item>
+        <item>De La Rosa</item>
+        <item>De Los Reyes</item>
+        <item>De Los Santos</item>
+        <item>Del Rosario</item>
+        <item>Esteros</item>
+        <item>Faviana</item>
+        <item>Favio</item>
+        <item>Flores</item>
+        <item>García</item>
+        <item>Go</item>
+        <item>Ignacio</item>
+        <item>Lee</item>
+        <item>Lim</item>
+        <item>Lovino</item>
+        <item>Mendoza</item>
+        <item>Mercado</item>
+        <item>Navarro</item>
+        <item>Ocampo</item>
+        <item>Palmero</item>
+        <item>Ramirez</item>
+        <item>Ramos</item>
+        <item>Reyes</item>
+        <item>Rivera</item>
+        <item>Salazar</item>
+        <item>Santos</item>
+        <item>Sumalpong</item>
+        <item>Sy</item>
+        <item>Tan</item>
+        <item>Tolentino</item>
+        <item>Tomas</item>
+        <item>Torres</item>
+        <item>Ty</item>
+        <item>Valencia</item>
+        <item>Villanueva</item>
+        <item>Yap</item>
+        <item>Yee</item>
+    </string-array>
+
+
 </resources>

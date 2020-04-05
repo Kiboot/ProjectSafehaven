@@ -84,19 +84,56 @@ public class GeneratePerson {
                 "Thea", "Tricia", "Trina", "Trisha", "Valerie", "Vanessa",
                 "Victoria", "Yana"};
         String[] fname_female = Resources.getSystem().getStringArray(R.array.fname_f);
-
         //random name picker
         return fname_female[gen.nextInt(120)];
-
     }
-    String randomizeLname(){}
-    String randomizeJob(){}
-    String randomizeTrait1(){}
-    String randomizeTrait2(){}
-    String randomizeTrait3(){}
-    String randomizeTrait4(){}
-    String randomizeItem1(){}
-    String randomizeItem2(){}
+    String randomizeLname(){
+        String[] lname = Resources.getSystem().getStringArray(R.array.lname);
+        return lname[gen.nextInt(51)];
+    }
+    String randomizeJob(){
+        int jobType;
+        String job="";
+        String[] jobClass1 = Resources.getSystem().getStringArray(R.array.job_arms);
+        String[] jobClass2 = Resources.getSystem().getStringArray(R.array.job_freeloader);
+        String[] jobClass3 = Resources.getSystem().getStringArray(R.array.job_medic);
+        String[] jobClass4 = Resources.getSystem().getStringArray(R.array.job_moraleboost);
+        String[] jobClass5 = Resources.getSystem().getStringArray(R.array.job_narrator);
+        String[] jobClass6 = Resources.getSystem().getStringArray(R.array.job_techies);
+
+        jobType = (gen.nextInt(6))+1;
+        if(jobType==1){job = jobClass1[gen.nextInt(3)];}
+        else if(jobType==2){job = jobClass2[gen.nextInt(6)];}
+        else if(jobType==3){job = jobClass3[gen.nextInt(3)];}
+        else if(jobType==4){job = jobClass4[gen.nextInt(5)];}
+        else if(jobType==5){job = jobClass5[gen.nextInt(5)];}
+        else{job = jobClass6[gen.nextInt(5)];}
+        return job;
+    }
+    String randomizeTrait1(){
+        String[]  trait1 = Resources.getSystem().getStringArray(R.array.trait1);
+        return trait1[gen.nextInt(5)];
+    }
+    String randomizeTrait2(){
+        String[] trait2 = Resources.getSystem().getStringArray(R.array.trait2);
+        return trait2[gen.nextInt(5)];
+    }
+    String randomizeTrait3(){
+        String[] trait3 = Resources.getSystem().getStringArray(R.array.trait3);
+        return trait3[gen.nextInt(5)];
+    }
+    String randomizeTrait4(){
+        String[] trait4 = Resources.getSystem().getStringArray(R.array.trait4);
+        return trait4[gen.nextInt(5)];
+    }
+    String randomizeItem1(){
+        String[]  item1 = Resources.getSystem().getStringArray(R.array.item1);
+        return item1[gen.nextInt(5)];
+    }
+    String randomizeItem2(){
+        String[]  item2 = Resources.getSystem().getStringArray(R.array.item2);
+        return item2[gen.nextInt(5)];
+    }
 
 
 
