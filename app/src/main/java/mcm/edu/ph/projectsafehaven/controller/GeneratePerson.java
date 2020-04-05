@@ -11,18 +11,25 @@ import mcm.edu.ph.projectsafehaven.R;
 public class GeneratePerson {
 
     private int SEED = 1; //random seeding not enabled at the moment
-    Random gen = new Random();
+    private int sex;
+    private int relLvl;
+    private Random gen = new Random();
+    private String fname;
+    private String lname;
 
     public int randomizeSex(){
         int sex;
         sex = gen.nextInt(2);
+        this.sex = sex;
         return sex;
+
     }
     //randomizing health is turned off for testing purposes
     public int randomizeHealth(){return 100;}
     public int randomizeRelLvl(){
         int relLvl;
         relLvl = gen.nextInt(3);
+        this.relLvl = relLvl;
         return relLvl;
     }
     public int randomizeStress(){
@@ -30,7 +37,7 @@ public class GeneratePerson {
         stress = gen.nextInt(30);
         return  stress;
     }
-    public int randomizeTrust(int relLvl){
+    public int randomizeTrust(){
         int trust;
         if(relLvl==0){
             //if he/she is a family member, trust level would be 70 - 100
@@ -59,6 +66,7 @@ public class GeneratePerson {
         return (double)food;
     }
     public String randomizeFname(){
+
         //band-aid solution until names have been transferred to a file
         String[] fnameArray = new String[]{
                 "Aezra","Lyka Dion", "Ria", "Abigail", "Aira", "Alexa",
@@ -81,23 +89,44 @@ public class GeneratePerson {
                 "Sarah", "Sheila", "Shine", "Sofia", "Sophia", "Stephanie",
                 "Thea", "Tricia", "Trina", "Trisha", "Valerie", "Vanessa",
                 "Victoria", "Yana"};
-        String[] fname_female = Resources.getSystem().getStringArray(R.array.fname_f);
+        //String[] fname_female = Resources.getSystem().getStringArray(R.array.fname_f);
         //random name picker
-        return fname_female[gen.nextInt(120)];
+        //return fname_female[gen.nextInt(120)];
+        String fname = fnameArray[gen.nextInt(120)];
+        this.fname = fname;
+        return fname;
     }
     public String randomizeLname(){
-        String[] lname = Resources.getSystem().getStringArray(R.array.lname);
-        return lname[gen.nextInt(51)];
+        String[] lname = new String[]{"Andrada", "Aquino", "Arellano", "Bautista", "Bernardino",
+                                    "Cardoza", "Caridad", "Castillo", "Castro", "Chan", "Chang",
+                                    "Chua", "Cruz", "De Castro", "De La Cruz", "De La Rosa",
+                                    "De Los Reyes", "De Los Santos", "Del Rosario", "Esteros",
+                                    "Faviana", "Favio", "Flores", "García", "Go", "Ignacio",
+                                    "Lee", "Lim", "Lovino", "Mendoza", "Mercado", "Navarro",
+                                    "Ocampo", "Palermo", "Ramirez", "Ramos", "Reyes", "Rivera",
+                                    "Salazar", "Santos", "Sumalpong", "Sy", "Tan", "Tolentino",
+                                    "Tomas", "Torres", "Ty", "Valencia", "Villanueva", "Yap", "Yee"};
+        String lnamee = lname[gen.nextInt(52)];
+        this.lname = lnamee;
+        return lnamee;
+
     }
     public String randomizeJob(){
         int jobType;
         String job="";
-        String[] jobClass1 = Resources.getSystem().getStringArray(R.array.job_arms);
-        String[] jobClass2 = Resources.getSystem().getStringArray(R.array.job_freeloader);
-        String[] jobClass3 = Resources.getSystem().getStringArray(R.array.job_medic);
-        String[] jobClass4 = Resources.getSystem().getStringArray(R.array.job_moraleboost);
-        String[] jobClass5 = Resources.getSystem().getStringArray(R.array.job_narrator);
-        String[] jobClass6 = Resources.getSystem().getStringArray(R.array.job_techies);
+        //String[] jobClass1 = Resources.getSystem().getStringArray(R.array.job_arms);
+        //String[] jobClass2 = Resources.getSystem().getStringArray(R.array.job_freeloader);
+        //String[] jobClass3 = Resources.getSystem().getStringArray(R.array.job_medic);
+        //String[] jobClass4 = Resources.getSystem().getStringArray(R.array.job_moraleboost);
+        //String[] jobClass5 = Resources.getSystem().getStringArray(R.array.job_narrator);
+        //String[] jobClass6 = Resources.getSystem().getStringArray(R.array.job_techies);
+        //Workaround - Better Fix next update
+        String[] jobClass1 = new String[]{"Police Retiree", "Army Veteran", "Security Guard"};
+        String[] jobClass2 = new String[]{"Housewife", "House Husband", "Pensioner","Jobless","Homeless","High School"};
+        String[] jobClass3= new String[]{"Veterinarian", "Student Doctor", "Student Nurse"};
+        String[] jobClass4 = new String[]{"Psychotherapist", "Motivational Speaker", "Counsellor", "Teacher", "Priest"};
+        String[] jobClass5 = new String[]{"Attorney", "Librarian", "Author", "News Reporter", "Scriptwriter"};
+        String[] jobClass6 = new String[]{"IT Specialist", "Engineer", "Architect", "Phyisicist", "Chemist"};
 
         jobType = (gen.nextInt(6))+1;
         if(jobType==1){job = jobClass1[gen.nextInt(3)];}
@@ -109,27 +138,27 @@ public class GeneratePerson {
         return job;
     }
     public String randomizeTrait1(){
-        String[]  trait1 = Resources.getSystem().getStringArray(R.array.trait1);
+        String[]  trait1 = new String[]{"Positive Trait 1", "Positive Trait 1", "Positive Trait 1","Positive Trait 1","Positive Trait 1"};
         return trait1[gen.nextInt(5)];
     }
     public String randomizeTrait2(){
-        String[] trait2 = Resources.getSystem().getStringArray(R.array.trait2);
+        String[] trait2 = new String[]{"Negative Trait 1", "Negative Trait 1", "Negative Trait 1","Negative Trait 1","Negative Trait 1"};
         return trait2[gen.nextInt(5)];
     }
     public String randomizeTrait3(){
-        String[] trait3 = Resources.getSystem().getStringArray(R.array.trait3);
+        String[] trait3 = new String[]{"Positive Trait 2", "Positive Trait 2", "Positive Trait 2","Positive Trait 2","Positive Trait 2"};
         return trait3[gen.nextInt(5)];
     }
     public String randomizeTrait4(){
-        String[] trait4 = Resources.getSystem().getStringArray(R.array.trait4);
+        String[] trait4 = new String[]{"Negative Trait 1", "Negative Trait 1", "Negative Trait 1","Negative Trait 1","Negative Trait 1"};
         return trait4[gen.nextInt(5)];
     }
     public String randomizeItem1(){
-        String[]  item1 = Resources.getSystem().getStringArray(R.array.item1);
+        String[]  item1 = new String[]{"Item 1", "No Item", "Item 1","No Item","Item 1"};
         return item1[gen.nextInt(5)];
     }
     public String randomizeItem2(){
-        String[]  item2 = Resources.getSystem().getStringArray(R.array.item2);
+        String[]  item2 = new String[]{"No Item", "Item 2", "No Item","Item 2","No Item"};
         return item2[gen.nextInt(5)];
     }
 
@@ -144,7 +173,7 @@ public class GeneratePerson {
         health = randomizeHealth();
         rellvl = randomizeRelLvl();
         stress = randomizeStress();
-        trust = randomizeTrust(rellvl);
+        trust = randomizeTrust();
         money = randomizeMoney();
         food = randomizeFood();
         fname = randomizeFname();
@@ -157,7 +186,9 @@ public class GeneratePerson {
         item1 = randomizeItem1();
         item2 = randomizeItem2();
     }
-
+    public String fullName(){
+        return fname+" "+lname;
+    }
 
 
 

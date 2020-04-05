@@ -215,7 +215,7 @@
         <item>Yana</item>
     </string-array>
 
-    /** 51 last names - please edit this comment if you are going to add more **/
+    /** 52 last names - please edit this comment if you are going to add more **/
     <string-array name="lname">
         <item>Andrada</item>
         <item>Aquino</item>
@@ -229,6 +229,7 @@
         <item>Chan</item>
         <item>Chang</item>
         <item>Chua</item>
+        <item>Cordero</item>
         <item>Cruz</item>
         <item>De Castro</item>
         <item>De La Cruz</item>
