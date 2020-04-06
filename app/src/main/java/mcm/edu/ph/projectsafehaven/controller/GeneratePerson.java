@@ -55,7 +55,6 @@ public class GeneratePerson {
     public double randomizeMoney(){
         int intMoney = 0;
         int hasMoneyChance, moneyAmtChance;
-        //intMoney = gen.nextInt(10000);
         hasMoneyChance = gen.nextInt(5); // 20% chance to have money
         if(hasMoneyChance == 0){
             moneyAmtChance = gen.nextInt(5); // another 20% roll for the amount of money
@@ -75,8 +74,24 @@ public class GeneratePerson {
         return (double)intMoney;
     }
     public double randomizeFood(){
-        int food;
-        food = gen.nextInt(100);
+        int food = 0;
+        int hasFoodChance, foodAmtChance;
+        hasFoodChance = gen.nextInt(100);
+        if(hasFoodChance < 33){ // 33% chance to have food
+            foodAmtChance = gen.nextInt(5); //food roll dice
+            if(foodAmtChance == 0){
+                //20% chance to have 35 - 60 units of food
+                food = gen.nextInt(25) + 1;
+                food += 35;
+            }
+            else if(foodAmtChance == 1 || foodAmtChance == 2){
+                // 40% chance to have 15 - 25 units of food
+                food = gen.nextInt(10) + 1;
+                food += 15;
+            }
+            //40% chance to have 1 - 10 units of food
+            else  food = gen.nextInt(10) + 1;
+        }
         return (double)food;
     }
     public String randomizeFname(int sex){
