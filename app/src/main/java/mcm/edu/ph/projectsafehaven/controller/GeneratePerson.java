@@ -1,9 +1,7 @@
 package mcm.edu.ph.projectsafehaven.controller;
 
 import android.content.res.Resources;
-
 import java.util.Random;
-
 import mcm.edu.ph.projectsafehaven.R;
 
 
