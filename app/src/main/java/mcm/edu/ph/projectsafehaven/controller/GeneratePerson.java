@@ -177,20 +177,20 @@ public class GeneratePerson {
         return job;
     }
     public String randomizeTrait1(){
-        String[]  trait1 = new String[]{"Positive Trait 1", "Positive Trait 1", "Positive Trait 1","Positive Trait 1","Positive Trait 1"};
+        String[]  trait1 = new String[]{"Pretty", "Emphatic", "Nimble","Hard Worker", "Stoic"};
         return trait1[gen.nextInt(5)];
     }
     public String randomizeTrait2(){
-        String[] trait2 = new String[]{"Negative Trait 1", "Negative Trait 1", "Negative Trait 1","Negative Trait 1","Negative Trait 1"};
-        return trait2[gen.nextInt(5)];
+        String[] trait2 = new String[]{"Clumsy", "Cripple", "Night Owl","Myopic","Obese", "Daydreamer"};
+        return trait2[gen.nextInt(6)];
     }
     public String randomizeTrait3(){
-        String[] trait3 = new String[]{"Positive Trait 2", "Positive Trait 2", "Positive Trait 2","Positive Trait 2","Positive Trait 2"};
+        String[] trait3 = new String[]{"Charismatic", "Resilient", "Iron-willed","Perceptive","Ascetic"};
         return trait3[gen.nextInt(5)];
     }
     public String randomizeTrait4(){
-        String[] trait4 = new String[]{"Negative Trait 1", "Negative Trait 1", "Negative Trait 1","Negative Trait 1","Negative Trait 1"};
-        return trait4[gen.nextInt(5)];
+        String[] trait4 = new String[]{"Kleptomaniac", "Lazy", "Annoying Voice","Depressive","Sickly","Coward", "Easy-going"};
+        return trait4[gen.nextInt(7)];
     }
     public String randomizeItem1(){
         String[]  item1 = new String[]{"Item 1", "No Item", "Item 1","No Item","Item 1"};
