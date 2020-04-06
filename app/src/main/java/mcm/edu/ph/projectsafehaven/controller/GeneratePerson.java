@@ -53,8 +53,25 @@ public class GeneratePerson {
         return  trust;
     }
     public double randomizeMoney(){
-        int intMoney;
-        intMoney = gen.nextInt(10000);
+        int intMoney = 0;
+        int hasMoneyChance, moneyAmtChance;
+        //intMoney = gen.nextInt(10000);
+        hasMoneyChance = gen.nextInt(5); // 20% chance to have money
+        if(hasMoneyChance == 0){
+            moneyAmtChance = gen.nextInt(5); // another 20% roll for the amount of money
+            if(moneyAmtChance == 0){
+                //20% chance to have 2500 - 5000 units of money
+                intMoney = gen.nextInt(2500) + 1;
+                intMoney += 2500;
+            }
+            else if(moneyAmtChance == 1 || moneyAmtChance == 2){
+                // 40% chance to have 500 - 1000 units of money
+                intMoney = gen.nextInt(500) + 1;
+                intMoney += 500;
+            }
+            //40% chance to have 1 - 500 units of money
+            else  intMoney = gen.nextInt(500) + 1;
+        }
         return (double)intMoney;
     }
     public double randomizeFood(){
@@ -64,32 +81,44 @@ public class GeneratePerson {
     }
     public String randomizeFname(int sex){
         //band-aid solution until names have been transferred to a file
-        String[] fnameArray = new String[]{
-                "Aezra","Lyka Dion", "Ria", "Abigail", "Aira", "Alexa",
-                "Alice", "Alyannah", "Alyssa", "Ana", "Andrea", "Angel",
-                "Angela", "Angelica", "Angelie", "Anna", "Anne", "Ara",
-                "Aya", "Bea", "Belle", "Bianca", "Camille", "Catherine",
-                "Cha", "Cherry", "Christine", "Claire", "Clare", "Clarissa",
-                "Coleen", "Cristine", "Czarina", "Danica", "Daniela", "Daniella",
-                "Danielle", "Denise", "Desiree", "Diana", "Eirene", "Ella",
-                "Elle", "Erin", "Faye", "Frances", "Gabrielle", "Grace",
-                "Hannah", "Ice", "Irene", "Isabel", "Jan", "Jane", "Jean",
-                "Jeanne", "Jennly", "Jessica", "Joan", "Joy", "Joyce",
-                "Judy", "Justine", "Karen", "Kate", "Kathleen", "Katrina",
-                "Kim", "Kimberly", "Kris", "Kristine", "Kyla", "Lea", "Leah",
-                "Lorraine", "Lou", "Louise", "Lovely", "Loysa", "Lyn",
-                "Mae", "Maria", "Marian", "Marie", "Mary", "Mavi", "Mica",
-                "Michelle", "Nadine", "Nathalie", "Nica", "Nicole", "Nikki",
-                "Nina", "Pamela", "Patricia", "Paula", "Pauline", "Pia",
-                "Precious", "Rachel", "Ren", "Rose", "Ruth", "Sam", "Sandy",
-                "Sarah", "Sheila", "Shine", "Sofia", "Sophia", "Stephanie",
-                "Thea", "Tricia", "Trina", "Trisha", "Valerie", "Vanessa",
-                "Victoria", "Yana"};
-        //String[] fname_female = Resources.getSystem().getStringArray(R.array.fname_f);
-        //random name picker
-        //return fname_female[gen.nextInt(120)];
-        String fnamee = fnameArray[gen.nextInt(120)];
-        return fnamee;
+        String fname="";
+        if (sex==1){
+            String[] fnameArray_f = new String[]{
+                    "Aezra","Lyka Dion", "Ria", "Abigail", "Aira", "Alexa",
+                    "Alice", "Alyannah", "Alyssa", "Ana", "Andrea", "Angel",
+                    "Angela", "Angelica", "Angelie", "Anna", "Anne", "Ara",
+                    "Aya", "Bea", "Belle", "Bianca", "Camille", "Catherine",
+                    "Cha", "Cherry", "Christine", "Claire", "Clare", "Clarissa",
+                    "Coleen", "Cristine", "Czarina", "Danica", "Daniela", "Daniella",
+                    "Danielle", "Denise", "Desiree", "Diana", "Eirene", "Ella",
+                    "Elle", "Erin", "Faye", "Frances", "Gabrielle", "Grace",
+                    "Hannah", "Ice", "Irene", "Isabel", "Jan", "Jane", "Jean",
+                    "Jeanne", "Jennly", "Jessica", "Joan", "Joy", "Joyce",
+                    "Judy", "Justine", "Karen", "Kate", "Kathleen", "Katrina",
+                    "Kim", "Kimberly", "Kris", "Kristine", "Kyla", "Lea", "Leah",
+                    "Lorraine", "Lou", "Louise", "Lovely", "Loysa", "Lyn",
+                    "Mae", "Maria", "Marian", "Marie", "Mary", "Mavi", "Mica",
+                    "Michelle", "Nadine", "Nathalie", "Nica", "Nicole", "Nikki",
+                    "Nina", "Pamela", "Patricia", "Paula", "Pauline", "Pia",
+                    "Precious", "Rachel", "Ren", "Rose", "Ruth", "Sam", "Sandy",
+                    "Sarah", "Sheila", "Shine", "Sofia", "Sophia", "Stephanie",
+                    "Thea", "Tricia", "Trina", "Trisha", "Valerie", "Vanessa",
+                    "Victoria", "Yana"};
+
+            fname = fnameArray_f[gen.nextInt(120)];
+        }
+        else{
+            String[] fnameArray_m = new String[]{
+                    "Ace","Adrian","Adrian Glenn","Angelo","Anthony","Ben","Brian","Carl","Chris",
+                    "Christian","Christopher","Clarence","Daniel","Ethan","Francis","Franklin",
+                    "Gabriel","Genesis","Grant","Hans","Ian","Ivan","Jake","Jan","Jasper","Jim",
+                    "Joel","John","Jonathan","Jose Arian","Jose Mari","Joseph","Josh","Jr","Justin",
+                    "Karl","Ken","Kervi","Kevin","Kim","Leon","Mark","Mark Rio","Melvin","Michael",
+                    "Mike","Nathan","Prince","Sean","Seth","Tristan","Vince","Vincent"};
+            fname = fnameArray_m[gen.nextInt(53)];
+        }
+
+        return fname;
     }
     public String randomizeLname(){
         String[] lname = new String[]{"Andrada", "Aquino", "Arellano", "Bautista", "Bernardino",
@@ -218,7 +247,7 @@ public class GeneratePerson {
         else if(relLvl == 1){
             relLvlString ="Acquaintance";
         }
-        else relLvlString = "Nobodies";
+        else relLvlString = "Unrelated";
         return relLvlString;
     }
 
