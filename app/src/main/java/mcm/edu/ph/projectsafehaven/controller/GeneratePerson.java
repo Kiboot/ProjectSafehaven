@@ -151,12 +151,6 @@ public class GeneratePerson {
     public String randomizeJob(){
         int jobType;
         String job="";
-        //String[] jobClass1 = Resources.getSystem().getStringArray(R.array.job_arms);
-        //String[] jobClass2 = Resources.getSystem().getStringArray(R.array.job_freeloader);
-        //String[] jobClass3 = Resources.getSystem().getStringArray(R.array.job_medic);
-        //String[] jobClass4 = Resources.getSystem().getStringArray(R.array.job_moraleboost);
-        //String[] jobClass5 = Resources.getSystem().getStringArray(R.array.job_narrator);
-        //String[] jobClass6 = Resources.getSystem().getStringArray(R.array.job_techies);
         //Workaround - Better Fix next update
         String[] jobClass1 = new String[]{"Police Retiree", "Army Veteran", "Security Guard"};
         String[] jobClass2 = new String[]{"Housewife", "House Husband", "Pensioner","Jobless","Homeless","High School"};
