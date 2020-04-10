@@ -239,21 +239,14 @@ public class GeneratePerson {
     /** Secondary getters **/
     public String getSexString(){
         String sexString;
-        if (sex==0){
-            sexString ="Male";
-        }
+        if (sex==0){sexString = "Male";}
         else sexString = "Female";
-
         return sexString;
     }
     public String getRelLvlString(){
         String relLvlString;
-        if(relLvl == 0){
-            relLvlString = "Family";
-        }
-        else if(relLvl == 1){
-            relLvlString ="Acquaintance";
-        }
+        if(relLvl == 0){ relLvlString = "Family"; }
+        else if(relLvl == 1){ relLvlString ="Acquaintance"; }
         else relLvlString = "Unrelated";
         return relLvlString;
     }

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:background="#33322e"
     tools:context=".view.Splash">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
@@ -15,8 +15,8 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
+        android:text=""
+        android:textColor="#796c5a"
         android:textSize="50sp"
         android:textStyle="bold" />
 
@@ -26,10 +26,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
-
+        <!-- inside linearlayout android:style="?metaButtonBarStyle" -->
+        <!-- inside button android:style="?metaButtonBarButtonStyle" -->
         <LinearLayout
             android:id="@+id/fullscreen_content_controls"
-            android:style="?metaButtonBarStyle"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
@@ -39,11 +40,13 @@
 
             <Button
                 android:id="@+id/dummy_button"
-                android:style="?metaButtonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/dummy_button" />
+                android:text="Play Game"
+                android:textColor="#000000"
+
+                />
 
         </LinearLayout>
     </FrameLayout>
