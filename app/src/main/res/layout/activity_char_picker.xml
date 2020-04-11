@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CharPicker">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="285dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:srcCompat="@drawable/attorneym_2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="440dp" />
+
+    <TextView
+        android:id="@+id/fNameLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="First Name: "
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fNameLbl"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/jobLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Occupation"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/fNameLbl"
+        app:layout_constraintTop_toBottomOf="@+id/fNameLbl" />
+
+    <Spinner
+        android:id="@+id/jobSpin"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/jobLbl"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@+id/jobLbl" />
+
+    <TextView
+        android:id="@+id/traitLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Traits: "
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/jobLbl"
+        app:layout_constraintTop_toBottomOf="@+id/jobLbl" />
+
+    <TextView
+        android:id="@+id/charTraitTxt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Trait PlaceHolder"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/traitLbl"
+        app:layout_constraintTop_toBottomOf="@+id/traitLbl" />
+
+    <TextView
+        android:id="@+id/charTraitTxt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Trait PlaceHolder"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/charTraitTxt1"
+        app:layout_constraintTop_toBottomOf="@+id/charTraitTxt1" />
+
+    <TextView
+        android:id="@+id/charTraitTxt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hidden Trait"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/charTraitTxt1"
+        app:layout_constraintStart_toStartOf="@+id/jobSpin" />
+
+    <TextView
+        android:id="@+id/charTraitTxt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hidden Trait"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/charTraitTxt2"
+        app:layout_constraintStart_toStartOf="@+id/charTraitTxt3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Randomize Trait"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
