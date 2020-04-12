@@ -8,10 +8,10 @@ import android.annotation.SuppressLint;
 import android.os.Handler;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
-import android.widget.Button;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -20,14 +20,14 @@ public class SplashActivity extends AppCompatActivity {
     private static final int UI_ANIMATION_DELAY = 300;
     private final Handler mHideHandler = new Handler();
     private final Handler aniHandler = new Handler();
-    private View mContentView;
+    private View mContentView, mControlsView;
     private TextView txt1,txt2,txt3,txt4,txt5,txt6;
     private ImageView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash2);
+        setContentView(R.layout.activity_splash);
         mVisible = true;
         mControlsView = findViewById(R.id.guidelineL);
         mContentView = findViewById(R.id.layoutt);
@@ -66,6 +66,16 @@ public class SplashActivity extends AppCompatActivity {
                 txt3.startAnimation(fadeOut);
                 logo.startAnimation(fadeIn);
                 txt2.startAnimation(fadeIn);
+
+                mContentView.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                        Intent i  = new Intent(SplashActivity.this, FamilyPicker.class);
+                        SplashActivity.this.startActivity(i);
+                        return false;
+                    }
+                });
             }
         }, 5000);
 
@@ -102,8 +112,6 @@ public class SplashActivity extends AppCompatActivity {
                     | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
     };
-
-    private View mControlsView;
     private final Runnable mShowPart2Runnable = new Runnable() {
         @Override
         public void run() {

@@ -24,13 +24,6 @@
         <activity android:name=".view.CharPicker" />
         <activity android:name=".view.FamilyPicker" />
         <activity
-            android:name=".view.Splash"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="landscape"
-            android:theme="@style/FullscreenTheme"
-            tools:ignore="LockedOrientationActivity">
-        </activity>
-        <activity
             android:name=".view.MainActivity"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" />

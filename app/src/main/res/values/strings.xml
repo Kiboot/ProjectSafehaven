@@ -8,7 +8,7 @@
     <string name="play">PLAY GAME</string>
     <string name="disclaimer_fiction">This is a work of fiction. Names, characters, places and incidents either are products of the author’s imagination or are used fictitiously. Any resemblance to actual events or locales or persons, living or dead, is entirely coincidental.</string>
     <string name="disclaimer_wip">This is an early alpha version of the game. This game is subject to constant changes. Your overall experience may vary from the actual product. Should you encounter any bugs, glitches, lack of functionality or other problems, notify the development team.</string>
-    <string name="copyright">M-Script and Friends \u00A9 2020 \n\nSwipe to Continue...</string>
+    <string name="copyright">M-Script and Friends \u00A9 2020 \n\nTap screen to continue...</string>
     <string name="fam_name">TYPE YOUR FAMILY NAME:</string>
     <string name="dev_lastName">Cardoza</string>
 
