@@ -250,6 +250,12 @@ public class GeneratePerson {
         else relLvlString = "Unrelated";
         return relLvlString;
     }
+    public void randomTraits(){
+        trait1 = randomizeTrait1();
+        trait2 = randomizeTrait2();
+        trait3 = randomizeTrait3();
+        trait4 = randomizeTrait4();
+    }
 
 
 }
