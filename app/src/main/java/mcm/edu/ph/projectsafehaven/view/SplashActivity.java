@@ -71,7 +71,7 @@ public class SplashActivity extends AppCompatActivity {
                     @Override
                     public boolean onTouch(View view, MotionEvent motionEvent) {
 
-                        Intent i  = new Intent(SplashActivity.this, FamilyPicker.class);
+                        Intent i  = new Intent(SplashActivity.this, Scenario.class);
                         SplashActivity.this.startActivity(i);
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 
