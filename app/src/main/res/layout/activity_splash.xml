@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:text="@string/copyright"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textAlignment="center"
 
         app:layout_constraintBottom_toTopOf="@+id/guidelineB"

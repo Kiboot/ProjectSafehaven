@@ -73,6 +73,9 @@ public class SplashActivity extends AppCompatActivity {
 
                         Intent i  = new Intent(SplashActivity.this, FamilyPicker.class);
                         SplashActivity.this.startActivity(i);
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
+
                         return false;
                     }
                 });
