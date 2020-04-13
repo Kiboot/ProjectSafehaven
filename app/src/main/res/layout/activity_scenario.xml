@@ -4,6 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/scenario_layout"
     tools:context=".view.Scenario">
 
+    <Button
+        android:id="@+id/btn_scen1"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/custom_rounded_corners"
+        android:singleLine="false"
+        android:text="Nuclear Family"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_scen2"
+        app:layout_constraintStart_toStartOf="@+id/scen_guideL" />
+
+    <Button
+        android:id="@+id/btn_scen2"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/custom_rounded_corners"
+        android:singleLine="false"
+        android:text="The Dormitory"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/btn_scen3"
+        app:layout_constraintStart_toEndOf="@+id/btn_scen1" />
+
+    <Button
+        android:id="@+id/btn_scen3"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/custom_rounded_corners"
+        android:singleLine="false"
+        android:text="The Prepper Doomer"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_scen2"
+        app:layout_constraintEnd_toStartOf="@+id/scen_guideR" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/scen_guideB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/scen_guideT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/scen_guideL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/scen_guideR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="194dp" />
+
+    <TextView
+        android:id="@+id/scenario_txt"
+        android:layout_width="645dp"
+        android:layout_height="135dp"
+        android:text="@string/scenario_select"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/scen_guideR"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="@+id/scen_guideL"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

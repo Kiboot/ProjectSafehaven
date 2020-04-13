@@ -8,8 +8,25 @@
     <string name="play">PLAY GAME</string>
     <string name="disclaimer_fiction">This is a work of fiction. Names, characters, places and incidents either are products of the author’s imagination or are used fictitiously. Any resemblance to actual events or locales or persons, living or dead, is entirely coincidental.</string>
     <string name="disclaimer_wip">This is an early alpha version of the game. This game is subject to constant changes. Your overall experience may vary from the actual product. Should you encounter any bugs, glitches, lack of functionality or other problems, notify the development team.</string>
-    <string name="copyright">M-Script and Friends \u00A9 2020 \n\nTap screen to continue...</string>
+    <string name="copyright">M-Script and Friends \u00A9 2020 \n\nTap screen to continue…</string>
     <string name="fam_name">TYPE YOUR FAMILY NAME:</string>
     <string name="dev_lastName">Cardoza</string>
+    <string name="scenario1">
+        Scenario 1
+        \n
+        \n
+        You have a typical family of four. As one of the parents, you decided that you will take in people as a global catastrophe creeps closer.
+        As you, your family, and your new dwellers brace for the Pandemic, you will face challenges both in and out of your shelter. Will all of you be safe
+        after a 4 month lockdown?
+        \n
+        \n
+        Long Press the button to proceed…
+    </string>
+    <string name="scenario_wip">Scenario: Work-in-Progress
+        \n
+        \n
+        The button will not be functional as the scenario is currently work-in-progress.
+    </string>
+    <string name="scenario_select">Click a button to read the scenario or long press to play it.</string>
 
 </resources>

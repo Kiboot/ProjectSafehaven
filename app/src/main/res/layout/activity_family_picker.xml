@@ -13,7 +13,7 @@
         android:layout_marginTop="100dp"
         android:textSize="30sp"
         android:text="@string/fam_name"
-        android:fontFamily="@font/antapani"
+        android:fontFamily="@font/fjallaoneregular"
         app:layout_constraintBottom_toTopOf="@+id/editText3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
         android:textSize="30sp"
         android:text=""
         android:hint="@string/dev_lastName"
-        android:fontFamily="@font/antapani"
+        android:fontFamily="@font/notoserifregular"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="@+id/famLbl"
         app:layout_constraintStart_toStartOf="@+id/famLbl"
@@ -42,11 +42,39 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="68dp"
         android:text="Proceed"
-        android:fontFamily="@font/antapani"
+        android:fontFamily="@font/latobold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editText3"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/editText3"
         app:layout_constraintTop_toBottomOf="@+id/editText3"
         app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
