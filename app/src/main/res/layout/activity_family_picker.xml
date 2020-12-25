@@ -14,14 +14,14 @@
         android:textSize="30sp"
         android:text="@string/fam_name"
         android:fontFamily="@font/fjallaoneregular"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        app:layout_constraintBottom_toTopOf="@+id/famNameTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/famNameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -31,23 +31,23 @@
         android:text=""
         android:hint="@string/dev_lastName"
         android:fontFamily="@font/notoserifregular"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnProceed"
         app:layout_constraintEnd_toEndOf="@+id/famLbl"
         app:layout_constraintStart_toStartOf="@+id/famLbl"
         app:layout_constraintTop_toBottomOf="@+id/famLbl" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnProceed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="68dp"
         android:text="Proceed"
         android:fontFamily="@font/latobold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editText3"
+        app:layout_constraintEnd_toEndOf="@+id/famNameTxt"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintStart_toStartOf="@+id/famNameTxt"
+        app:layout_constraintTop_toBottomOf="@+id/famNameTxt"
         app:layout_constraintVertical_bias="1.0" />
 
     <androidx.constraintlayout.widget.Guideline

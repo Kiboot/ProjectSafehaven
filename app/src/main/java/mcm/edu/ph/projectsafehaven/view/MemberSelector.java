@@ -2,41 +2,19 @@ package mcm.edu.ph.projectsafehaven.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
 import mcm.edu.ph.projectsafehaven.R;
-import android.widget.Button;
-import android.widget.TextView;
 
-public class FamilyPicker extends AppCompatActivity {
-
+public class MemberSelector extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_family_picker);
-        enableFullscreen();
-
-        Button btnPrd = findViewById(R.id.btnProceed);
-
-
-
-        btnPrd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                TextView lName = findViewById(R.id.famNameTxt);
-                Intent i = new Intent(FamilyPicker.this, MemberSelector.class);
-
-                i.putExtra("last_name",String.valueOf(lName.getText()));
-            }
-        });
-
+        setContentView(R.layout.activity_member_selector);
     }
-
 
     private void enableFullscreen(){
         View decorView = getWindow().getDecorView();
@@ -51,5 +29,4 @@ public class FamilyPicker extends AppCompatActivity {
             );
         }
     }
-
 }
